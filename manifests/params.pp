@@ -9,8 +9,8 @@ class ack::params {
       case $::operatingsystem {
         CentOS: {
           case $::operatingsystemmajrelease {
-            6: { $required_repos = 'atrpms,repoforge' }
-            7: { $required_repos = 'atrpms,epel,repoforge,nux-dextop' }
+            6: { $required_repos = 'epel' }
+            7: { $required_repos = 'epel' }
             default: {
               $required_repos = ''
               fail("${::operatingsystem} version ${::operatingsystemmajrelease} not supported")
